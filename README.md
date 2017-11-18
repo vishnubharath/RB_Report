@@ -1,6 +1,6 @@
 # RB Report
 
-RB Report app will read and display .csv file in format "First name","Sur name","Issue count","Date of birth".
+RB Report app will read and display .csv files in format "First name","Sur name","Issue count","Date of birth".
 
 ## App Usage
 
@@ -21,6 +21,7 @@ Step 3. npm intall
 Step 4. npm start
 
 Please find below the npm command to run test.
+
 npm test
 
 ## Build
