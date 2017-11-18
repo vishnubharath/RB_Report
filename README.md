@@ -13,9 +13,15 @@ The contents of the table can be filtered using 'Issue Count Search' text box.
 ## Checkout and Run
 
 Step 1. git clone https://github.com/vishnubharath/RB_Report.git
+
 Step 2. cd RB_Report
+
 Step 3. npm intall
+
 Step 4. npm start
+
+Please find below the npm command to run test.
+npm test
 
 ## Build
 
