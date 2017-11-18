@@ -1,0 +1,41 @@
+<mat-toolbar color="primary">
+
+  <mat-toolbar-row>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="newWindow()">New Window</button>
+      <button mat-menu-item (click)="upload()">Upload</button>
+      <button mat-menu-item (click)="clear()">Clear</button>
+    </mat-menu>
+    <span id="menubar_title">RB Report</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+
+<div style="margin:30px">
+
+  <form class="x-form">
+    <mat-form-field class="x-full-width">
+      <input matInput placeholder="Issue Count Search" (keyup)="filterIssueCount($event)">
+    </mat-form-field>
+  </form>
+
+  <mat-card>
+  <table matSort (matSortChange)="sortData($event)">
+    <tr>
+      <th mat-sort-header="fname">First Name</th>
+      <th mat-sort-header="sname">Sur name</th>
+      <th mat-sort-header="issueCount">Issue count</th>
+      <th mat-sort-header="dob">Date of birth</th>
+    </tr>
+
+    <tr *ngFor="let data of sortedData">
+      <td [hidden]="data.filteredOut">{{data.fname}}</td>
+      <td [hidden]="data.filteredOut">{{data.sname}}</td>
+      <td [hidden]="data.filteredOut">{{data.issueCount}}</td>
+      <td [hidden]="data.filteredOut">{{data.dob | date : 'dd MMM yyyy'}}</td>
+    </tr>
+  </table>
+  </mat-card>
+</div>

@@ -1,0 +1,13 @@
+<h3 mat-dialog-title>Upload File</h3>
+<mat-dialog-content>
+    <label>
+    <span *ngIf="!filePath" >Click Here to Select file</span>
+    <span *ngIf="filePath" title="{{filePath}}" >{{filePath}}</span> 
+    <input type="file" hidden accept=".csv" (change)="updateFilePath($event)">
+</label>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="file" >Yes</button>
+    <button mat-button mat-dialog-close>No</button>
+</mat-dialog-actions>
